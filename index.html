@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333; /* Set your desired text color */
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-top: 10px;
+            color: #363636;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Heading -->
+<h1>Links</h1>
+
+<!-- Container to display messages -->
+<ul id="messageList"></ul>
+
+<!-- Message to paste links -->
+<p>Paste the links into your browser.</p>
+
+<script>
+    // JavaScript code to create and display messages
+    const messages = [
+        "https://w.n.dnsmirror.org", "https://z.d.2of1.org", "https://w.r.youngchurch.org", "https://gigagarret.vercel.app", "https://academicalshowcase.qualitypoolsboulder.com",
+        "https://mathisreallyfun.vercel.app", "https://dove.soapclient.com", ".", ".", ".",
+        ".", ".", ".", ".", ".",
+        ".", ".", ".", ".", ".",
+        
+    ];
+
+    // Displaying the messages on the webpage
+    const messageList = document.getElementById('messageList');
+    messages.forEach(message => {
+        const listItem = document.createElement('li');
+        listItem.textContent = message;
+        messageList.appendChild(listItem);
+    });
+</script>
+
+</body>
+</html>
