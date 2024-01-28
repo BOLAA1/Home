@@ -1,0 +1,40 @@
+.title {
+  color: #ddd; /* Light grey color */
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(0, 16, 26), rgb(0, 0, 0));
+  color: #ddd; /* Light grey color for default text */
+}
+
+h2 {
+  color: #ddd; /* Light grey color */
+}
+
+.fixed-nav-bar-right .navbar-link {
+  color: #ddd; /* Light grey color */
+}
+
+#INImg {
+  content: url('/main.png');
+}
+
+input,
+select,
+.column,
+.key-form,
+button,
+.key-button,
+.searchbar {
+  background-color: black;
+  color: #ddd; /* Light grey color for text */
+}
+
+.settings-card {
+  background-color: #111;
+  color: #ddd; /* Light grey color for text */
+}
+
+input:checked + .slider-round {
+  background-color: #000;
+}
