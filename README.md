@@ -1,2 +1,2 @@
 # Home
-Links for Games
+Links For Proxys (Unblioked Games)
