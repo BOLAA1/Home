@@ -1,2 +1,2 @@
 # Home
-Links For Proxys (Unblioked Games)
+Links For Proxys (Unblocked Games)
