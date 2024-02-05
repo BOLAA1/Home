@@ -1,119 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        /* Your CSS styles go here */
-        body {
-            font-family: 'Inter', sans-serif;
-            text-decoration: none;
-            background: var(--page);
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            color: #f0f0f0;
-        }
+  <title>My Website</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-size: 14px;
+    }
 
-        .title {
-            font-size: 4vh;
-            color: var(--title);
-            text-align: center;
-            text-transform: uppercase;
-            border-radius: 0px 0px 5px 5px;
-            margin-top: 2vh; /* Adjusted margin-top */
-            margin-bottom: 1vh; /* Adjusted margin-bottom */
-            text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-        }
+    h1, h3, .value, .label {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      transition: text-shadow 0.5s;
+    }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 80vh; /* Adjusted height */
-            overflow-y: auto;
-            scrollbar-color: var(--text-color) var(--primary-color);
-        }
+    h1:hover, h3:hover, .value:hover, .label:hover {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
 
-        ul::-webkit-scrollbar {
-            width: 8px;
-        }
+    h1:hover {
+      color: blue;
+    }
 
-        ul::-webkit-scrollbar-thumb {
-            background-color: var(--text-color);
-            border-radius: 4px;
-        }
+    .faq {
+      max-width: 400px;
+      margin: 0 auto;
+    }
 
-        li {
-            padding: 8px;
-            font-size: 14px;
-            background-color: var(--accent-color);
-            margin: 3px;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-            text-align: center;
-        }
+    .faq-item {
+      padding: 15px;
+      color: white;
+    }
 
-        li:hover {
-            background-color: var(--hover-color);
-        }
+    .faq-item:hover {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
 
-        :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #2c2c2c;
-            --accent-color: #444;
-            --text-color: #f0f0f0;
-            --hover-color: #555;
-        }
+    .faq-body {
+      display: none;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-            position: relative;
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            overflow: hidden;
-        }
+    .stats {
+      display: flex;
+      align-items: center;
+      color: white;
+    }
 
-        #messageList {
-            margin-top: 0; /* Adjusted margin-top */
-            height: 100vh; /* Adjusted height to take up the full viewport */
-        }
-    </style>
+    .stat {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .stat:hover {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+
+    .value, .label {
+      display: none;
+    }
+
+    /* Customize scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: black;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #333;
+    }
+
+    /* Update footer text */
+    footer {
+      text-align: center;
+    }
+
+    footer p {
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    footer p:hover {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Heading -->
-<h1 class="title">Links</h1>
+  <header>
+    <h1></h1>
+  </header>
 
-<!-- Container to display messages -->
-<ul id="messageList"></ul>
+  <main>
 
-<script>
-    // JavaScript code to create and display messages
-    const messages = [
-        "https://stats.volkszaehler.org", "https://frontend.development.sanluix.org", "https://database.development.sanluix.org", "https://peoplelikethisithink.fr.to", "https://9x773f-8080.csb.app",
-        "https://dove.soapclient.com", "https://5r4thx-8080.csb.app", "https://8qq933-8080.csb.app", ".", ".",
-        ".", ".", ".", ".", ".",
-        ".", "💀Michael 3.9 feet Tall💀", ".", ".", ".",
-        ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ".", ""
-    ];
+    <section class="faq">
 
-    // Displaying the messages on the webpage
-    const messageList = document.getElementById('messageList');
-    messages.forEach(message => {
-        const listItem = document.createElement('li');
-        listItem.textContent = message;
-        messageList.appendChild(listItem);
-    });
-</script>
+      <div class="faq-item">
+        <h3>https://stats.volkszaehler.org</h3>
+        <div class="faq-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam harum expedita, fugit inventore sit sequi aperiam iusto rem, nisi, quibusdam totam qui! Adipisci magnam fugiat ut molestias, soluta consequuntur quibusdam!
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>https://frontend.development.sanluix.org</h3>
+        <div class="faq-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos, fugit consequuntur doloremque, repellendus eos explicabo assumenda quis eaque, sit dolorum odio. Esse quisquam consectetur, fugit dolore corporis exercitationem totam?
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>https://database.development.sanluix.org</h3>
+        <div class="faq-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste doloremque, tempora consequatur tenetur impedit atque esse cumque eum quam tempore autem ipsa id necessitatibus, laboriosam voluptatibus, optio praesentium mollitia.
+        </div>
+      </div>
+
+      <!-- Add 5 more faq-items -->
+
+      <div class="faq-item">
+        <h3>https://peoplelikethisithink.fr.to</h3>
+        <div class="faq-body">
+          https://9x773f-8080.csb.app
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>https://9x773f-8080.csb.app</h3>
+        <div class="faq-body">
+          Yet another FAQ content goes here.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>https://dove.soapclient.com</h3>
+        <div class="faq-body">
+          One more FAQ content goes here.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>https://5r4thx-8080.csb.app</h3>
+        <div class="faq-body">
+          Additional FAQ content goes here.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3>https://8qq933-8080.csb.app</h3>
+        <div class="faq-body">
+          Last FAQ content goes here.
+        </div>
+      </div>
+
+    </section>
+
+    <section class="stats">
+
+      <div class="stat">
+        <div class="value">7500+</div>
+        <div class="label">Runs</div>
+      </div>
+
+      <div class="stat">
+        <div class="value">1000+</div>
+        <div class="label">Users</div>
+      </div>
+
+      <div class="stat">
+        <div class="value">2</div>
+        <div class="label">Owners</div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; V2</p>
+  </footer>
 
 </body>
+
 </html>
