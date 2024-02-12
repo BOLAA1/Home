@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
     <style>
         /* Your CSS styles go here */
         body {
@@ -62,6 +63,11 @@
             text-align: center;
         }
 
+        li a {
+            color: inherit;
+            text-decoration: none;
+        }
+
         li:hover {
             background-color: var(--hover-color);
         }
@@ -92,7 +98,7 @@
 <body>
 
 <!-- Heading -->
-<h1 class="title">Links</h1>
+<h1 class="title">Sites</h1>
 
 <!-- Container to display messages -->
 <ul id="messageList"></ul>
@@ -100,18 +106,22 @@
 <script>
     // JavaScript code to create and display messages
     const messages = [
-        "https://uhwsufhsdjfhasjhse78gsdfugiaud8asjkhdhuiwerfu.vercel.app", "https://frontend.development.sanluix.org", "https://database.development.sanluix.org", "https://peoplelikethisithink.fr.to", "https://9x773f-8080.csb.app",
-        "https://dove.soapclient.com", "https://5r4thx-8080.csb.app", "https://8qq933-8080.csb.app", "", "Links are Blocked wait for new ones.",
+        "https://home.bclib.org", "https://services.about.dansted.org", "https://team.about.dansted.org", "", "",
         "", "", "", "", "",
-        "", "💀", "💀", "", "",
-        "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
+        "", "", "", "", "",
+        "", "", "", "", "",
+        "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
     ];
 
     // Displaying the messages on the webpage
     const messageList = document.getElementById('messageList');
     messages.forEach(message => {
         const listItem = document.createElement('li');
-        listItem.textContent = message;
+        const link = document.createElement('a');
+        link.href = message;
+        link.target = "_blank"; // Open link in a new tab
+        link.textContent = message;
+        listItem.appendChild(link);
         messageList.appendChild(listItem);
     });
 </script>
