@@ -6,7 +6,7 @@
     <title>Home</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="home.png" type="image/x-icon">
+    <link rel="icon" href="photos/home.png" type="image/x-icon">
 
     <!-- Your existing styles and other meta tags go here -->
 
@@ -14,7 +14,6 @@
         /* Your CSS styles go here */
         body {
             font-family: 'Inter', sans-serif;
-            text-decoration: none;
             background: var(--page);
             height: 100%;
             background-position: center;
@@ -25,7 +24,7 @@
             color: #f0f0f0;
         }
 
-        .title {
+        h1.title {
             font-size: 4vh;
             color: var(--title);
             text-align: center;
@@ -34,7 +33,7 @@
             margin-top: 2vh;
             margin-bottom: 1vh;
             text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.8);
-            font-weight: bold; /* Added to make the letters bold */
+            font-weight: bold;
         }
 
         ul {
@@ -83,20 +82,8 @@
             --accent-color: #444;
             --text-color: #f0f0f0;
             --hover-color: #555;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-            position: relative;
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            overflow: hidden;
-        }
-
-        #messageList {
-            margin-top: 0;
-            height: 100vh;
+            --page: /* Add your page background color here */;
+            --title: /* Add your title color here */;
         }
     </style>
 </head>
@@ -115,7 +102,7 @@
         "https://code.pythonabc.org", "", "", "", "",
         "", "", "", "", "",
         "", "", "", "", "",
-        "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "ggs",
+        "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "ggs",
     ];
 
     // Displaying the messages on the webpage
