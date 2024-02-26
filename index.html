@@ -14,6 +14,7 @@
         /* Your CSS styles go here */
         body {
             font-family: 'Inter', sans-serif;
+            text-decoration: none;
             background: var(--page);
             height: 100%;
             background-position: center;
@@ -24,7 +25,7 @@
             color: #f0f0f0;
         }
 
-        h1.title {
+        .title {
             font-size: 4vh;
             color: var(--title);
             text-align: center;
@@ -33,7 +34,7 @@
             margin-top: 2vh;
             margin-bottom: 1vh;
             text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.8);
-            font-weight: bold;
+            font-weight: bold; /* Added to make the letters bold */
         }
 
         ul {
@@ -51,4 +52,84 @@
             width: 8px;
         }
 
-        ul
+        ul::-webkit-scrollbar-thumb {
+            background-color: var(--text-color);
+            border-radius: 4px;
+        }
+
+        li {
+            padding: 8px;
+            font-size: 14px;
+            background-color: var(--accent-color);
+            margin: 3px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        li a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        li:hover {
+            background-color: var(--hover-color);
+        }
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #2c2c2c;
+            --accent-color: #444;
+            --text-color: #f0f0f0;
+            --hover-color: #555;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            position: relative;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            overflow: hidden;
+        }
+
+        #messageList {
+            margin-top: 0;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Heading -->
+<h1 class="title">Sites</h1>
+
+<!-- Container to display messages -->
+<ul id="messageList"></ul>
+
+<script>
+    // JavaScript code to create and display messages
+    const messages = [
+        "https://history.about.dansted.org", "https://initiatives.charity.anandamarga.org.uk", "https://volunteer.charity.anandamarga.org.uk", "https://home.bclib.org", "https://history.about.dansted.org",
+        "https://code.pythonabc.org", "", "", "", "",
+        "", "", "", "", "",
+        "", "", "", "", "",
+        "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "ggs",
+    ];
+
+    // Displaying the messages on the webpage
+    const messageList = document.getElementById('messageList');
+    messages.forEach(message => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = message;
+        link.target = "_blank"; // Open link in a new tab
+        link.textContent = message;
+        listItem.appendChild(link);
+        messageList.appendChild(listItem);
+    });
+</script>
+
+</body>
+</html>
